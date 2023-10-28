@@ -27,6 +27,7 @@ define KernelPackage/fast-classifier/Default
   DEPENDS:=+kmod-ipt-conntrack +kmod-shortcut-fe
   TITLE:=Kernel driver for FAST Classifier
   FILES:=$(PKG_BUILD_DIR)/fast-classifier.ko
+  AUTOLOAD:=$(call AutoLoad,15,fast-classifer)
   KCONFIG:= \
 	   CONFIG_NF_CONNTRACK_EVENTS=y \
 	   CONFIG_NF_CONNTRACK_CHAIN_EVENTS=y \
